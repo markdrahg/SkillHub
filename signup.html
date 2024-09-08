@@ -13,7 +13,7 @@
             <div class="col-md-4 centered">
                 <div class="card">
                     <!-- The Login section of the page -->
-                    <div class="card-body forlogin">
+                    <div class="card-body forLogin">
                         <h2>Login</h2>
                         <form>
                             <div class="form-group">
@@ -27,15 +27,15 @@
                             <button type="submit" class="btn btn-primary">Login</button>
                             <div>
                                 <br/>
-                                <h5 class="register-btn">Register</h5>
+                                <h5 class="register-btn" onclick='addRegister()' >Register</h5>
                             </div>
                         </form>
                     </div>
                 </div>
 
                 <!-- The Signup section of the page -->
-                <div class="card-body forsignup">
-                    <h2>Sign Up</h2>
+                <div class="card-body forRegister">
+                    <h2 class="white">Sign Up</h2>
                     <form>
                         <div class="form-group">
                             <label for="username">Username</label>
@@ -56,7 +56,7 @@
                         <button type="submit" class="btn btn-primary">Sign Up</button>
                         <div>
                             <br/>
-                            <h5 class="register-btn">Login</h5>
+                            <h5 class="register-btn" onclick='addLogin()' >Login</h5>
                         </div>
                     </form>
                 </div>
@@ -65,5 +65,6 @@
             </div>
         </div>
     </div>
+    <script src="signup.js"></script>
 </body>
 </html>

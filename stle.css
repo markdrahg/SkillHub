@@ -1,3 +1,4 @@
+
 .header{
 	min-height: 100vh;
 	width: 100%;
@@ -160,7 +161,9 @@ body{
     justify-content: center;
 }
 
-
+.f-link{
+	-webkit-text-security: square;
+}
 
 @media screen and (max-width: 767px) {
     .layout423_card-content {
