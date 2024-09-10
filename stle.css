@@ -1,0 +1,172 @@
+
+.header{
+	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4 9 30 / 52%)),url(images/img1.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.custom-color-1{
+	color: #fff;
+	font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.custom-color-2{
+	color:#fff;
+}
+
+.cards-col{
+	flex-basis: 31%;
+	/* background: #f2f2f2; */
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding:20px 12px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+h3{
+	font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+
+
+.row{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+.about-cards-col{
+	background: #6381ce1a;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding:20px 12px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+
+.fb{
+	color: #fff;
+	background-color: #272727d1;
+}
+
+.fb2{
+	color: #fff;
+	background-color: #3f3f3f;
+}
+
+.flinks{
+	text-decoration: none;
+	text-decoration-line: none;
+}
+
+.p-2.bd-highlight:hover{
+	color: blue;
+}
+
+.my_img{
+	/* min-height: 550px; */
+
+    height: 500px;
+}
+
+.my_img:hover{
+	transform: scale(1.05);
+    filter: brightness(1.2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.code-gif{
+	box-shadow: -5px 2px 8px 2px #0d6efd;
+}
+
+.holder{
+	position: relative;
+}
+
+.top-left {
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	background: #0000008a;
+	min-inline-size: -webkit-fill-available;
+	font-weight: bolder;
+	color: #fff;
+	font-family: initial;
+}
+
+
+
+.nav-decorator:after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background:#039BE5;
+	display: block;
+	margin:auto;
+	transition: 0.5s;
+}
+
+
+
+.nav-decorator{
+	list-style: none;
+}
+
+
+.nav-decorator:after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background:#039BE5;
+	transition: 0.5s;
+}
+
+.nav-decorator:hover:after{
+	width:100%;
+}
+
+.btn-top-left {
+	position: absolute;
+	top: 150px;
+	left: 10px;
+	background: #0000008a;
+	min-inline-size: -webkit-fill-available;
+	font-weight: bolder;
+	color: #fff;
+	font-family: initial;
+	}
+
+.anim1{
+	text-align: center;
+}
+
+body{
+	background: #10122c;
+	color: #fff;
+}
+
+
+
+.console-container {
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-link{
+	-webkit-text-security: square;
+}
+
+@media screen and (max-width: 767px) {
+    .layout423_card-content {
+        padding: 1.5rem;
+    }
+}
