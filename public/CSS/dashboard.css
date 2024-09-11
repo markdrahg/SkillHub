@@ -1,0 +1,57 @@
+/* Custom styles for the sidebar */
+.sidebar {
+    width: 100%; /* Full width for small screens */
+    height: auto;
+    position: relative;
+}
+
+.text-white{
+    text-decoration: inherit;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 250px; /* Fixed width for larger screens */
+        height: 100vh; /* Full height for larger screens */
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .container-fluid {
+        margin-left: 270px; /* Make space for the sidebar */
+    }
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background-color: #28a745;
+}
+
+.sidebar .nav-link {
+    font-size: 18px;
+    padding: 15px 10px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.content-section {
+    display: none;
+}
+
+#dashboardSection {
+    display: block; /* Initially show dashboard */
+}
