@@ -9,7 +9,9 @@
     text-decoration: inherit;
 }
 
-
+.cours-img{
+    height:110px;
+}
 
 
 @media (min-width: 768px) {
