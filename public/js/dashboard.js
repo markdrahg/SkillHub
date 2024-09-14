@@ -22,14 +22,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (courses.length > 0) {
             courses.forEach(course => {
                 const courseElement = document.createElement('div');
+                courseElement.className = 'col-md-4';  // Responsive column
                 courseElement.innerHTML = `
-                    <h2>${course.name}</h2>
-                    <img src="${course.image}" alt="Not found, Work on it" class="cours-img">
-                    <p>${course.name}</p>
-                    <p>Instructor: ${course.tutor}</p>
-                    <button>Add Course</button>
+                    <div class="card mb-4 shadow-sm">
+                        <img src="${course.image}" alt="Not found, Work on it" class="card-img-top cours-img">
+                        <div class="card-body">
+                            <h5 class="card-title">${course.name}</h5>
+                            <p class="card-text">Instructor: ${course.tutor}</p>
+                            <button class="btn btn-primary">Add Course</button>
+                        </div>
+                    </div>
                 `;
-                container.appendChild(courseElement);
+                document.getElementById('courses-container').appendChild(courseElement);
             });
         } else {
             container.innerHTML = '<p>No courses available at the moment.</p>';
