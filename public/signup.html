@@ -15,19 +15,18 @@
                     <!-- The Login section of the page -->
                     <div class="card-body forLogin">
                         <h2>Login</h2>
-                        <form>
+                        <form id="login-form">
                             <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                <label for="login-username">Username</label>
+                                <input type="text" class="form-control" id="login-username" placeholder="Enter username">
                             </div>
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter password">
+                                <label for="login-password">Password</label>
+                                <input type="password" class="form-control" id="login-password" placeholder="Enter password">
                             </div>
                             <button type="submit" class="btn btn-primary">Login</button>
-                            <div>
-                                <br/>
-                                <h5 class="register-btn" onclick='addRegister()' >Register</h5>
+                            <div><br/>
+                                <h5 class="register-btn" onclick="addRegister()">Register</h5>
                             </div>
                         </form>
                     </div>
@@ -36,27 +35,22 @@
                 <!-- The Signup section of the page -->
                 <div class="card-body forRegister">
                     <h2 class="white">Sign Up</h2>
-                    <form>
+                    <form id="signup-form">
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Enter username">
+                            <label for="signup-username">Username</label>
+                            <input type="text" class="form-control" id="signup-username" placeholder="Enter username">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter email">
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password">
-                        </div>
-                        <div class="form-group">
-                            <label for="confirm-password">Confirm Password</label>
-                            <input type="password" class="form-control" id="confirm-password" placeholder="Enter confirm password">
+                            <label for="signup-password">Password</label>
+                            <input type="password" class="form-control" id="signup-password" placeholder="Enter password">
                         </div>
                         <button type="submit" class="btn btn-primary">Sign Up</button>
-                        <div>
-                            <br/>
-                            <h5 class="register-btn" onclick='addLogin()' >Login</h5>
+                        <div><br/>
+                            <h5 class="register-btn" onclick="addLogin()">Login</h5>
                         </div>
                     </form>
                 </div>

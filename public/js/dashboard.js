@@ -1,3 +1,71 @@
+// window.onload = async function() {
+//     const token = localStorage.getItem('token');
+//     if (!token) {
+//         window.location.href = '/register'; // Redirect to register if no token found
+//     }
+
+//     try {
+//         // Send a request to the backend to fetch user info with the token in the Authorization header
+//         const response = await fetch('/api/auth/user', {
+//             method: 'GET',
+//             headers: {
+//                 'Authorization': token,
+//                 'Content-Type': 'application/json'
+//             }
+//         });
+
+//         const data = await response.json();
+
+//         if (response.ok) {
+//             document.querySelector('.username-display').innerText = `Welcome, ${data.username}`;
+//         } else {
+//             alert(data.message);
+//             window.location.href = '/register';
+//         }
+//     } catch (error) {
+//         console.error('Error:', error);
+//         window.location.href = '/register';
+//     }
+// };
+
+
+
+
+// Fetch dashboard data (or access dashboard) after loading the page
+document.addEventListener('DOMContentLoaded', async () => {
+    const token = localStorage.getItem('token'); // Retrieve token from localStorage
+  
+    if (!token) {
+      alert('No token found. Please log in.');
+      window.location.href = '/login'; // Redirect to login page if no token
+      return;
+    }
+  
+    try {
+      const response = await fetch('/dashboard', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}` // Set token in Authorization header
+        }
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        // Populate dashboard data with the returned data
+        console.log(data); // Handle dashboard data here
+      } else {
+        const result = await response.json();
+        alert(result.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  });
+  
+
+
+
+
 function showSection(sectionId) {
     // Hide all sections
     const sections = document.querySelectorAll('.content-section');
