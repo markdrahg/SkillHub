@@ -98,6 +98,11 @@ app.get('/api/user-info', protect, (req, res) => {
     res.json({ username: req.session.user.username });
 });
 
+// Route to Save Courses
+const savedCoursesRouter = require('./routes/savedCourses');
+app.use('/api/saved-courses', savedCoursesRouter);
+
+
 
 // Route to serve signup.html
 app.get('/register', (req, res) => {

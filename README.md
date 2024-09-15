@@ -4,7 +4,9 @@
 
 ## 2.npm i express (to install express)
 
-## 3. node app to (start app on port)
+## 3. node app (tostart app on port)
+
+## node seed (to migrate courses data)
 
 ## mongodb data handlingwith SkillHub
 

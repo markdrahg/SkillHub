@@ -32,35 +32,35 @@
 
 
 // Fetch dashboard data (or access dashboard) after loading the page
-document.addEventListener('DOMContentLoaded', async () => {
-    const token = localStorage.getItem('token'); // Retrieve token from localStorage
+// document.addEventListener('DOMContentLoaded', async () => {
+//     const token = localStorage.getItem('token'); // Retrieve token from localStorage
   
-    if (!token) {
-      alert('No token found. Please log in.');
-      window.location.href = '/login'; // Redirect to login page if no token
-      return;
-    }
+//     if (!token) {
+//       alert('No token found. Please log in.');
+//       window.location.href = '/login'; // Redirect to login page if no token
+//       return;
+//     }
   
-    try {
-      const response = await fetch('/dashboard', {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${token}` // Set token in Authorization header
-        }
-      });
+//     try {
+//       const response = await fetch('/dashboard', {
+//         method: 'GET',
+//         headers: {
+//           'Authorization': `Bearer ${token}` // Set token in Authorization header
+//         }
+//       });
   
-      if (response.ok) {
-        const data = await response.json();
-        // Populate dashboard data with the returned data
-        console.log(data); // Handle dashboard data here
-      } else {
-        const result = await response.json();
-        alert(result.message);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  });
+//       if (response.ok) {
+//         const data = await response.json();
+//         // Populate dashboard data with the returned data
+//         console.log(data); // Handle dashboard data here
+//       } else {
+//         const result = await response.json();
+//         alert(result.message);
+//       }
+//     } catch (error) {
+//       console.error('Error:', error);
+//     }
+//   });
   
 
 
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <div class="card-body">
                             <h5 class="card-title">${course.name}</h5>
                             <p class="card-text">Instructor: ${course.tutor}</p>
-                            <button class="btn btn-primary">Add Course</button>
+                            <button class="btn btn-primary save-course-btn" data-course-id="${course._id}" >Add Course</button>
                         </div>
                     </div>
                 `;
@@ -111,3 +111,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         container.innerHTML = '<p>Failed to load courses. Please try again later.</p>';
     }
 });
+
+
+
